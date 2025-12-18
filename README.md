@@ -1,7 +1,8 @@
 # minimal-generators
 
-(Here goes the explanation of what it does and reference to the article)
+This Python package computes a minimal system of generators of a family of prime ideals in a power series ring. 
 
+This code has been developed by Oriol Almirall Lladò and Laura González. 
 ## Requirements
 
 - **Python**: ≥ 3.11
