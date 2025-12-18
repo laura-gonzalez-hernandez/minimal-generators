@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/minimal_generators/__main__.py
+src/minimal_generators/cli.py
+src/minimal_generators/determinants.py
+src/minimal_generators/generators.py
+src/minimal_generators/polynomials.py
+src/minimal_generators/timing.py
+src/minimal_generators/utils.py
+src/minimal_generators.egg-info/PKG-INFO
+src/minimal_generators.egg-info/SOURCES.txt
+src/minimal_generators.egg-info/dependency_links.txt
+src/minimal_generators.egg-info/entry_points.txt
+src/minimal_generators.egg-info/requires.txt
+src/minimal_generators.egg-info/top_level.txt

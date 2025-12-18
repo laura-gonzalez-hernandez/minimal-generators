@@ -1,0 +1,2 @@
+[console_scripts]
+minimal-generators = minimal_generators.cli:main

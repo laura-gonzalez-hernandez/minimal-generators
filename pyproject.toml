@@ -1,0 +1,27 @@
+[project]
+name = "minimal-generators"
+version = "0.1.0"
+description = "Symbolic construction of minimal generators (work in progress)"
+authors = [ { name = "Your Name" } ]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "sympy>=1.12",
+  "numpy>=1.23",
+  "matplotlib>=3.10.7",
+]
+
+[project.scripts]
+minimal-generators = "minimal_generators.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["minimal_generators*"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
