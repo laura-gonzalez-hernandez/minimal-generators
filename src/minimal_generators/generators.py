@@ -140,11 +140,17 @@ def get_minimal_generators(n: int, singular: bool = False, emit: bool = True, pr
             for j in range(0,kappa[k-1]+1):
                 temp_coef.append((-1)**(j)*bin_det(list(set(interval_I[k-1]) - {exp_x[k-1][j]}),goods[k-1])[1])
             coef.append(temp_coef)
-
-            s1.append(r[k-1]+n)
-            s2.append(r[k-1]+int((n-1)*n/2))
-            s3.append(r[k-1]+int((n-1)*n/2)+n)
-            s4.append(r[k-1]+n**2)
+            
+            if n%2==1:
+                s1.append(r[k-1]+n)
+                s2.append(r[k-1]+int((n-1)*n/2))
+                s3.append(r[k-1]+int((n-1)*n/2)+n)
+                s4.append(r[k-1]+n**2)
+            elif n%2==0:
+                s1.append(r[k-1]+n-1)
+                s2.append(r[k-1]+int((n-1)*n/2))
+                s3.append(r[k-1]+int((n-1)*n/2)+n-1)
+                s4.append(r[k-1]+n**2-1)
 
             phi_s1_1.append(math.floor((i[k-1]-1)/2))
             phi_s1_2.append(1)
@@ -307,11 +313,16 @@ def get_minimal_generators(n: int, singular: bool = False, emit: bool = True, pr
                 temp_coef.append((-1)**(j)*bin_det(list(set(interval_I[k-1]) - {exp_x[k-1][j]}),goods[k-1])[1])
             coef.append(temp_coef)
 
-
-            s1.append(r[k-1]+n)
-            s2.append(r[k-1]+int((n-1)*n/2))
-            s3.append(r[k-1]+int((n-1)*n/2)+n)
-            s4.append(r[k-1]+n**2)
+            if n%2==1:
+                s1.append(r[k-1]+n)
+                s2.append(r[k-1]+int((n-1)*n/2))
+                s3.append(r[k-1]+int((n-1)*n/2)+n)
+                s4.append(r[k-1]+n**2)
+            elif n%2==0:
+                s1.append(r[k-1]+n-1)
+                s2.append(r[k-1]+int((n-1)*n/2))
+                s3.append(r[k-1]+int((n-1)*n/2)+n-1)
+                s4.append(r[k-1]+n**2-1)
 
             phi_s1_1.append(math.floor((i[k-1]-1)/2))
             phi_s1_2.append(0)
